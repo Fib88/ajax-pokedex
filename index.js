@@ -15,6 +15,8 @@ function getPokemon(){
             //log sprites and id to DOM
             document.getElementById("pokeshow").setAttribute("src", `${data.sprites.front_shiny}`)
             document.getElementById("pokeid").innerHTML = data.id;
+            document.getElementById("pokeweight").innerHTML = "Weight " + data.weight;
+            document.getElementById("pokeheight").innerHTML = "Height " + data.height;
 
 
             //log randomised moveset to DOM
@@ -30,6 +32,6 @@ function multipleRandom(){
     let moveList = ""
     for(let i=0;i<4;i++){
         document.getElementById("moveSet").innerHTML = (data.moves[randomMove].move.name)
-        
+
     }
 }
