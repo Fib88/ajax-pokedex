@@ -1,5 +1,7 @@
 # ajax-pokedex
 
+ https://fib88.github.io/ajax-pokedex/
+
 AJAX Pokédex
 Practical Information
 
