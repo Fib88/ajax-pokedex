@@ -20,16 +20,16 @@ function getPokemon(){
             //log randomised moveset to DOM
             let maxMoves = data.moves.length;
             let randomMove = Math.floor(Math.random()*(maxMoves-1)+1);
-            document.getElementById("moveSet").innerHTML = (data.moves[randomMove].move.name)
+            document.getElementById("moveSet").innerHTML += " "+ (data.moves[randomMove].move.name)
 
             console.log(data.moves.length);
         })
 }
 
 function multipleRandom(){
-    let moveList = []
+    let moveList = ""
     for(let i=0;i<4;i++){
         document.getElementById("moveSet").innerHTML = (data.moves[randomMove].move.name)
-
+        
     }
 }
