@@ -18,20 +18,22 @@ function getPokemon(){
             document.getElementById("pokeweight").innerHTML = "Weight " + data.weight;
             document.getElementById("pokeheight").innerHTML = "Height " + data.height;
 
-
-            //log randomised moveset to DOM
-            let maxMoves = data.moves.length;
-            let randomMove = Math.floor(Math.random()*(maxMoves-1)+1);
-            document.getElementById("moveSet").innerHTML += " "+ (data.moves[randomMove].move.name)
-
-            console.log(data.moves.length);
+            let moveArray = multipleRandom(data.moves);
+            displayMoves(moveArray);
         })
 }
 
-function multipleRandom(){
-    let moveList = ""
+function multipleRandom(moves){
+    let moveList = [];
     for(let i=0;i<4;i++){
-        document.getElementById("moveSet").innerHTML = (data.moves[randomMove].move.name)
 
+        let randomMove = Math.floor(Math.random() * (moves.length - 0) + 0);
+        moveList.push(moves[randomMove].move.name);
     }
+    return moveList;
+}
+
+function displayMoves(moveshow){
+    console.log(moveshow);
+    document.getElementById("moves").innerHTML = moveshow;
 }
