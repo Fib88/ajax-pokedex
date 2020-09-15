@@ -23,17 +23,19 @@ function getPokemon(){
         })
 }
 
+//make function that gets random moves and pushes it to an empty array
 function multipleRandom(moves){
     let moveList = [];
     for(let i=0;i<4;i++){
-
         let randomMove = Math.floor(Math.random() * (moves.length - 0) + 0);
         moveList.push(moves[randomMove].move.name);
     }
     return moveList;
 }
 
+//function that displays moves
 function displayMoves(moveshow){
-    console.log(moveshow);
     document.getElementById("moves").innerHTML = moveshow;
 }
+
+
